@@ -9,5 +9,5 @@ for eId in eventIds:
     entries = helper.getRallyEntries(eId)
     cars = helper.getCarData(entries)
 
-    data = pd.DataFrame(entries)
+    data = pd.DataFrame(cars)
     data.to_csv("./entries/"+str(eId)+"-entries.csv")
