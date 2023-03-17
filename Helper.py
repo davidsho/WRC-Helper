@@ -48,6 +48,21 @@ class Helper:
         else:
             return r['rallyEvents']['items']
         
+    def getEventIds(self, season):
+        '''Gets list of IDs from a season
+        
+        Parameters
+        ----------
+        season : list
+            List of events in a season
+        
+        Returns
+        -------
+        list
+            List of event IDs
+        '''
+        return [ev['id'] for ev in season]
+        
     def getEventIdFromName(self, season, eventName):
         '''Gets the ID of an event from its name.
 
